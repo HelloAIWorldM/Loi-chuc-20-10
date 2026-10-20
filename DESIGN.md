@@ -70,7 +70,7 @@ Tuân thủ nguyên tắc cân bằng thị giác 60-30-10:
  │    │    │    • Tình mẹ bao la • Đong đầy yêu thương
  │    │
  │    └── <section class="letter-bento" id="letterCard">
- │         ├── Con dấu sơn son dát vàng: "MẪU TÂM • TRI ÂN MẸ"
+ │         ├── Huy hiệu dát vàng: "✦ TRI ÂN MẸ ✦"
  │         ├── Tiêu đề: "Gửi Mẹ Yêu Dấu Của Con 🌸"
  │         ├── Nội dung bức tâm thư hiếu nghĩa cảm động
  │         ├── Chữ ký: "Mãi yêu Mẹ • Đứa con bé bỏng của Mẹ"
