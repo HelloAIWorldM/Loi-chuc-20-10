@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#08020a">
+  <title>20/10 • Tri Ân Mẹ Yêu • Người Phụ Nữ Tuyệt Vời Nhất ✨</title>
+  
+  <!-- Google Fonts: Editorial Serif + Modern Clean Sans + Calligraphy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Dancing+Script:wght@600;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,800;1,500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Audio Element (Nhạc nền du dương cảm động) -->
+  <audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- Nền Gradient Cực Quang Hoàng Gia Mẫu Tử (Maternal Warm Aurora Ambient) -->
+  <div id="ambientCanvas">
+    <div class="aurora-beam beam-1"></div>
+    <div class="aurora-beam beam-2"></div>
+    <div class="aurora-beam beam-3"></div>
+  </div>
+
+  <!-- Canvas Pháo hoa trái tim & Hạt lấp lánh (Hardware-accelerated) -->
+  <canvas id="fireworksCanvas"></canvas>
+
+  <!-- SÂN KHẤU NGHỆ THUẬT (#STAGE) -->
+  <main id="stage">
+    
+    <!-- Header: Editorial Typography cao cấp -->
+    <header class="master-header">
+      <div class="royal-badge">
+        <span class="badge-star">✦</span>
+        <span class="badge-text">NGÀY PHỤ NỮ VIỆT NAM • 20.10</span>
+        <span class="badge-star">✦</span>
+      </div>
+
+      <div class="title-group">
+        <h1 class="main-title">
+          <span class="num">20</span>
+          <span class="glyph-sep">·</span>
+          <span class="num">10</span>
+        </h1>
+        <p class="subtitle-serif">Tri Ân Người Phụ Nữ Tuyệt Vời Nhất Của Con</p>
+      </div>
+
+      <div class="guild-seal-strip">
+        <span class="seal-line"></span>
+        <span class="seal-text">VẠN DẶM BÌNH AN • MẸ LÀ BẾN ĐỖ</span>
+        <span class="seal-line"></span>
+      </div>
+    </header>
+
+    <!-- Centerpiece: Đóa Mẫu Đơn Kim Liên & Trái Tim Phát Sáng (Bespoke Artwork) -->
+    <div class="artwork-stage">
+      <div class="halo-ring halo-outer"></div>
+      <div class="halo-ring halo-inner"></div>
+
+      <!-- Đồ họa Vector SVG Hoa Mẫu Đơn & Trái Tim Ấm Áp Dát Vàng -->
+      <svg class="artwork-svg" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="goldGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff6dd" />
+            <stop offset="40%" stop-color="#f5d596" />
+            <stop offset="100%" stop-color="#c48a31" />
+          </linearGradient>
+          <linearGradient id="roseGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffc2dc" />
+            <stop offset="50%" stop-color="#e8437f" />
+            <stop offset="100%" stop-color="#8f103d" />
+          </linearGradient>
+          <linearGradient id="heartGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(232, 67, 127, 0.85)" />
+            <stop offset="100%" stop-color="rgba(77, 12, 45, 0.95)" />
+          </linearGradient>
+          <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="35%" stop-color="#ffe4a8" />
+            <stop offset="70%" stop-color="#ff739d" />
+            <stop offset="100%" stop-color="rgba(232, 67, 127, 0)" />
+          </radialGradient>
+        </defs>
+
+        <!-- Hào quang vầng trăng mẫu tử phía sau -->
+        <circle cx="180" cy="180" r="110" fill="url(#sunGlow)" opacity="0.32" />
+
+        <!-- Cánh hoa mẫu đơn mềm mại bao bọc vòng ngoài -->
+        <g opacity="0.88">
+          <path d="M180 85 C140 120, 110 170, 180 255 C250 170, 220 120, 180 85 Z" fill="url(#roseGradient)" opacity="0.5" />
+          <path d="M110 160 C130 110, 230 110, 250 160 C230 230, 130 230, 110 160 Z" fill="url(#roseGradient)" opacity="0.4" />
+        </g>
+
+        <!-- Trái tim yêu thương của mẹ lồng ghép tinh tế -->
+        <g filter="drop-shadow(0 8px 26px rgba(232, 67, 127, 0.55))">
+          <path d="M180 250 C110 205, 95 145, 138 120 C165 105, 180 130, 180 130 C180 130, 195 105, 222 120 C265 145, 250 205, 180 250 Z" 
+                fill="url(#heartGradient)" stroke="url(#goldGradient)" stroke-width="2" />
+        </g>
+
+        <!-- Đóa sen vàng kim liên bung nở nơi trung tâm trái tim -->
+        <g filter="drop-shadow(0 6px 18px rgba(245, 213, 150, 0.6))">
+          <path d="M180 240 C145 220, 130 185, 180 150 C230 185, 215 220, 180 240 Z" fill="url(#roseGradient)" opacity="0.85" />
+          <path d="M180 240 C155 200, 150 160, 180 140 C210 160, 205 200, 180 240 Z" fill="url(#goldGradient)" opacity="0.9" />
+          <path d="M180 240 C165 190, 170 145, 180 125 C190 145, 195 190, 180 240 Z" fill="#fffaf0" />
+        </g>
+
+        <!-- Tâm sáng ấm áp lan tỏa -->
+        <circle cx="180" cy="180" r="14" fill="#ffffff" filter="drop-shadow(0 0 14px #ffe4a8)" />
+        <circle cx="180" cy="180" r="6" fill="#f5d596" />
+
+        <!-- Dải tua rua cát tường may mắn dát vàng -->
+        <g stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round">
+          <path d="M180 260 L180 315" />
+          <circle cx="180" cy="265" r="4" fill="#f5d596" />
+          <circle cx="180" cy="320" r="5" fill="#f5d596" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- Hệ thống Thẻ Lời Chúc Dát Vàng Dành Cho Mẹ -->
+    <div id="wishesGrid">
+      <div class="marquee-track">
+        <!-- 6 Thẻ lời chúc chính thức -->
+        <div class="wish-card pos-l1" style="--delay: 0s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Bình an một đời • Nụ cười luôn nở</span>
+        </div>
+        <div class="wish-card pos-l2" style="--delay: 1.4s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Sức khỏe dồi dào • An nhiên tự tại</span>
+        </div>
+        <div class="wish-card pos-l3" style="--delay: 0.8s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Mẹ là bầu trời • Điểm tựa bình yên</span>
+        </div>
+        <div class="wish-card pos-r1" style="--delay: 0.4s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Trẻ mãi không già • Vạn sự như ý</span>
+        </div>
+        <div class="wish-card pos-r2" style="--delay: 1.8s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Cả đời vì con • Nay hãy vì chính Mẹ</span>
+        </div>
+        <div class="wish-card pos-r3" style="--delay: 1.1s;">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Tình Mẹ bao la • Đong đầy yêu thương</span>
+        </div>
+
+        <!-- 6 Thẻ nhân bản tạo vòng lặp vô tận mượt mà trên Mobile (Hardware CSS Animation) -->
+        <div class="wish-card pos-l1 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Bình an một đời • Nụ cười luôn nở</span>
+        </div>
+        <div class="wish-card pos-l2 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Sức khỏe dồi dào • An nhiên tự tại</span>
+        </div>
+        <div class="wish-card pos-l3 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Mẹ là bầu trời • Điểm tựa bình yên</span>
+        </div>
+        <div class="wish-card pos-r1 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Trẻ mãi không già • Vạn sự như ý</span>
+        </div>
+        <div class="wish-card pos-r2 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Cả đời vì con • Nay hãy vì chính Mẹ</span>
+        </div>
+        <div class="wish-card pos-r3 cloned" aria-hidden="true">
+          <span class="card-icon">❖</span>
+          <span class="card-text">Tình Mẹ bao la • Đong đầy yêu thương</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bức Tâm Thư Bento Card (Editorial Obsidian Glassmorphism) -->
+    <section class="letter-bento" id="letterCard">
+      <div class="bento-border-glow"></div>
+      
+      <div class="bento-content">
+        <!-- Con dấu sơn son dát vàng Mẫu Tâm -->
+        <div class="guild-stamp">
+          <span class="stamp-box">母心</span>
+          <span class="stamp-sub">TRI ÂN MẸ</span>
+        </div>
+
+        <h2 class="recipient-heading" id="cardRecipient">Gửi Mẹ Yêu Dấu Của Con 🌸</h2>
+        
+        <div class="letter-body">
+          <p id="letterGreeting">
+            Nhân ngày <strong>Phụ Nữ Việt Nam 20/10</strong>, con xin gửi tới người phụ nữ tuyệt vời nhất cuộc đời con lời chúc mừng chân thành và sâu sắc nhất từ tận đáy lòng.
+          </p>
+          <p>
+            Cảm ơn Mẹ vì đã luôn là bến đỗ bình yên, bao dung chở che và dành trọn tình yêu thương vô điều kiện cho con qua bao năm tháng. Cả một đời Mẹ đã vất vả, hy sinh vì gia đình; hôm nay và mãi về sau, con chỉ mong Mẹ luôn dồi dào sức khỏe, tâm hồn thảnh thơi, an nhiên tự tại và mỗi ngày trôi qua đều ngập tràn nụ cười rạng rỡ.
+          </p>
+          <p>
+            Với con, được thấy Mẹ bình an và mỉm cười hạnh phúc chính là món quà quý giá nhất trần đời!
+          </p>
+        </div>
+
+        <div class="letter-sign">
+          <span class="sign-ornament">✦</span>
+          <span class="sign-text">Mãi yêu Mẹ • Đứa con bé bỏng của Mẹ kính chúc</span>
+          <span class="sign-ornament">✦</span>
+        </div>
+
+        <!-- Hàng nút bấm tương tác -->
+        <div class="bento-actions">
+          <button class="action-btn btn-refrost" id="btnRefrost">
+            <span class="btn-icon">❄️</span>
+            <span>Lau Lại Kính</span>
+          </button>
+          <button class="action-btn btn-heart-pulse" id="btnHeartPulse">
+            <span class="btn-icon">❤️</span>
+            <span>Gửi Yêu Thương</span>
+          </button>
+          <button class="action-btn btn-copy" id="btnShare">
+            <span class="btn-icon">📋</span>
+            <span>Chép Lời Chúc</span>
+          </button>
+        </div>
+
+        <div class="interaction-tip">
+          ✦ Vũ khúc pháo hoa trái tim thắp sáng tình yêu thương gửi đến Mẹ ✦
+        </div>
+
+        <!-- Dòng tri ân chân thành -->
+        <div class="card-copyright">
+          <span class="copyright-ornament">❖</span>
+          <span>Dành trọn tình yêu thương và lòng biết ơn kính dâng Mẹ</span>
+          <span class="copyright-ornament">❖</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LỚP KÍNH SƯƠNG MỜ MANG TÍNH TƯƠNG TÁC (#fogWrapper) -->
+  <div id="fogWrapper">
+    <canvas id="fogCanvas"></canvas>
+    
+    <!-- Lời nhắc lau kính thanh lịch -->
+    <div id="fogPrompt">
+      <div class="wiper-indicator">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <path d="M16 6 C16 4, 20 4, 20 10 L20 16 C20 20, 18 24, 14 24 C10 24, 8 21, 8 18 L8 14 C8 11, 11 11, 11 14 L11 17" stroke="#f5d596" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="prompt-label">Kính mờ sương ấm... chạm nhẹ gạt đi để gửi trọn yêu thương đến Mẹ ✨</p>
+      <button id="btnSkipFog" class="skip-link">Mở thiệp gửi Mẹ ➔</button>
+    </div>
+  </div>
+
+  <!-- NÚT ÂM THANH (MINIMAL LUXURY) -->
+  <button id="btnAudio" class="floating-audio muted" aria-label="Bật/Tắt nhạc">
+    <svg class="sound-on" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg class="sound-off" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <!-- Toast phản hồi copy -->
+  <div id="toast" class="toast-bubble">Đã sao chép bức tâm thư gửi Mẹ yêu! ❤️✨</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
