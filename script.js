@@ -26,6 +26,10 @@
   const btnShare = $('#btnShare');
   const toast = $('#toast');
 
+  const modalLove = $('#modalLove');
+  const btnCloseModal = $('#btnCloseModal');
+  const btnCopyAcc = $('#btnCopyAcc');
+
   // ================= 2. QUẢN LÝ ÂM THANH =================
   let audioStarted = false;
 
@@ -498,7 +502,17 @@
     refrostWindow();
   });
 
-  // Nút Thả Tim Yêu Thương: Bắn 2 cụm pháo hoa trái tim lớn rực rỡ
+  function openLoveModal() {
+    modalLove.classList.add('show');
+    modalLove.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeLoveModal() {
+    modalLove.classList.remove('show');
+    modalLove.setAttribute('aria-hidden', 'true');
+  }
+
+  // Nút Thả Tim Yêu Thương: Bắn 2 cụm pháo hoa trái tim lớn và mở Popup kết hợp ảnh con & QR ngân hàng
   btnHeartPulse.addEventListener('click', (e) => {
     e.stopPropagation();
     ensureAudioStarted();
@@ -507,6 +521,38 @@
     createHeartFirework(w * 0.5, h * 0.28, 1.45);
     setTimeout(() => createHeartFirework(w * 0.35, h * 0.22, 1.2), 250);
     setTimeout(() => createHeartFirework(w * 0.65, h * 0.22, 1.2), 500);
+    setTimeout(() => {
+      openLoveModal();
+    }, 450);
+  });
+
+  btnCloseModal.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeLoveModal();
+  });
+
+  modalLove.addEventListener('click', (e) => {
+    if (e.target === modalLove) {
+      closeLoveModal();
+    }
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalLove.classList.contains('show')) {
+      closeLoveModal();
+    }
+  });
+
+  btnCopyAcc.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const acc = '0934766051';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(acc)
+        .then(() => showToast('Đã chép số tài khoản của Phát (0934766051)! Cảm ơn Mẹ yêu! ❤️'))
+        .catch(() => showToast('Đã chép số tài khoản của Phát (0934766051)! Cảm ơn Mẹ yêu! ❤️'));
+    } else {
+      showToast('Đã chép số tài khoản của Phát (0934766051)! Cảm ơn Mẹ yêu! ❤️');
+    }
   });
 
   // Nút Sao chép bức tâm thư gửi Mẹ
@@ -521,7 +567,12 @@
     }
   });
 
-  function showToast() {
+  function showToast(customMsg) {
+    if (customMsg) {
+      toast.textContent = customMsg;
+    } else {
+      toast.textContent = 'Đã sao chép bức tâm thư gửi Mẹ yêu! ❤️✨';
+    }
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2800);
   }

@@ -273,6 +273,65 @@
   <!-- Toast phản hồi copy -->
   <div id="toast" class="toast-bubble">Đã sao chép bức tâm thư gửi Mẹ yêu! ❤️✨</div>
 
+  <!-- MODAL POPUP: GÓC YÊU THƯƠNG & TING TING TIẾP SỨC (#modalLove) -->
+  <div id="modalLove" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="btnCloseModal" aria-label="Đóng cửa sổ">✕</button>
+
+      <div class="modal-header">
+        <div class="royal-badge modal-badge">
+          <span class="badge-star">✦</span>
+          <span class="badge-text">QUỸ TIẾP SỨC YÊU THƯƠNG</span>
+          <span class="badge-star">✦</span>
+        </div>
+        <h3 class="modal-title">Góc "Ting Ting" Cho Con Trai Yêu 💖</h3>
+        <p class="modal-subtitle">Ăn no mặc ấm mới có sức học giỏi, chăm ngoan làm Mẹ tự hào ạ!</p>
+      </div>
+
+      <div class="modal-body-split">
+        <!-- Cột 1: Ảnh con trai hài hước, đáng yêu -->
+        <div class="split-col col-photo">
+          <div class="photo-frame">
+            <img src="avatar.png" alt="Ảnh con trai yêu của Mẹ" class="son-avatar" width="576" height="1024" loading="lazy">
+            <span class="photo-tag">Đứa con cưng của Mẹ 🥺✨</span>
+          </div>
+          <p class="photo-caption">"Mẹ ơi con đang đợi Mẹ tiếp thêm năng lượng yêu thương nè 🥰"</p>
+        </div>
+
+        <!-- Cột 2: Mã QR Ngân Hàng & Thông tin chuyển khoản -->
+        <div class="split-col col-banking">
+          <div class="qr-frame">
+            <img src="qr_card.png" alt="Mã QR Chuyển khoản VietQR MB Bank" class="bank-qr-img" width="365" height="488" loading="lazy">
+          </div>
+          
+          <div class="bank-details-box">
+            <div class="bank-row">
+              <span class="bank-lbl">Ngân hàng:</span>
+              <span class="bank-val">MB Bank (Quân Đội)</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-lbl">Chủ TK:</span>
+              <span class="bank-val highlight">TRUONG TAN PHAT</span>
+            </div>
+            <div class="bank-row">
+              <span class="bank-lbl">Số TK:</span>
+              <span class="bank-val bank-acc-num" id="accNumber">0934766051</span>
+            </div>
+          </div>
+
+          <button class="btn-copy-acc" id="btnCopyAcc">
+            <span class="btn-icon">📋</span>
+            <span>Sao Chép STK: 0934766051</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer-tip">
+        ✦ Quét mã VietQR trên mọi ứng dụng ngân hàng hoặc ví điện tử ✦
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
