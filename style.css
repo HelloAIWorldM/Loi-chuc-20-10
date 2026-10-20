@@ -345,15 +345,14 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(245, 213, 150, 0.5);
 }
 
-/* Cột Trái Đối Xứng */
-.wish-card.pos-l1 { left: max(18px, calc(50% - 590px)); top: 26%; }
-.wish-card.pos-l2 { left: max(12px, calc(50% - 620px)); top: 46%; }
-.wish-card.pos-l3 { left: max(18px, calc(50% - 590px)); top: 66%; }
+/* Vị trí trên Desktop */
+.wish-card.pos-l1 { left: 4%; top: 22%; }
+.wish-card.pos-l2 { left: 2.5%; top: 38%; }
+.wish-card.pos-l3 { left: 4%; top: 54%; }
 
-/* Cột Phải Đối Xứng */
-.wish-card.pos-r1 { right: max(18px, calc(50% - 590px)); top: 26%; }
-.wish-card.pos-r2 { right: max(12px, calc(50% - 620px)); top: 46%; }
-.wish-card.pos-r3 { right: max(18px, calc(50% - 590px)); top: 66%; }
+.wish-card.pos-r1 { right: 4%; top: 22%; }
+.wish-card.pos-r2 { right: 2.5%; top: 38%; }
+.wish-card.pos-r3 { right: 4%; top: 54%; }
 
 @keyframes floatCard {
   0% { transform: translateY(0); }
@@ -745,8 +744,8 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* ================= 10. RESPONSIVE TABLET & MOBILE TỐI ƯU ================= */
-@media (max-width: 1024px) {
+/* ================= 10. RESPONSIVE MOBILE TỐI ƯU ================= */
+@media (max-width: 768px) {
   #stage {
     position: relative;
     min-height: 100dvh;
